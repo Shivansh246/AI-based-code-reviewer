@@ -1,0 +1,11 @@
+{
+  "id": "CVE001",
+  "source": "dependency",
+  "title": "Vulnerable dependency",
+  "severity": "critical",
+  "confidence": 1.0,
+  "description": "The installed dependency has a known security vulnerability.",
+  "package": "example-package",
+  "version": "1.2.3",
+  "cve": "CVE-2026-XXXXX"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "SEM001",
+  "source": "static_analysis",
+  "title": "Possible SQL Injection",
+  "severity": "high",
+  "confidence": 0.91,
+  "description": "User-controlled input is directly incorporated into a SQL query.",
+  "location": {
+    "file": "app.py",
+    "line": 42,
+    "column": 15
+  },
+  "evidence": "query = 'SELECT * FROM users WHERE id=' + user_input",
+  "remediation": "Use parameterized queries instead of string concatenation.",
+  "cwe": "CWE-89",
+  "rule_id": "sql-injection"
+}
