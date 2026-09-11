@@ -9,4 +9,4 @@ with open("schemas/example_static.json") as file:
 
 validate(instance=finding, schema=schema)
 
-print("Finding is valid!")
+print("Finding is valid!")  

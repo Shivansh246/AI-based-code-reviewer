@@ -1,0 +1,18 @@
+{
+  "id": "LLM001",
+  "source": "llm",
+  "title": "Possible Command Injection",
+  "severity": "high",
+  "confidence": 0.87,
+  "description": "Untrusted user input appears to be passed to a shell command.",
+  "location": {
+    "file": "server.py",
+    "line": 27
+  },
+  "evidence": "os.system(user_input)",
+  "remediation": "Avoid executing user-controlled input as a shell command.",
+  "cwe": "CWE-78",
+  "exploitability": 7.0,
+  "impact": 5.0,
+  "risk_score": 6.2
+}

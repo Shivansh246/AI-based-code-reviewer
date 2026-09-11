@@ -67,3 +67,38 @@ that are easy to exploit should receive additional priority.
 4. The score is a prioritization mechanism, not a replacement for
    established vulnerability scoring systems.
 5. The model can be improved later using more detailed security signals.
+
+## Automatic Scoring Rules
+
+The initial model uses simple keyword-based rules.
+
+### Exploitability
+
+The base exploitability score is 5.
+
+| Condition | Change |
+|---|---:|
+| Remote exploitation | +2 |
+| SQL injection | +2 |
+| Command injection | +2 |
+| Authentication required | -2 |
+
+The final value is clamped between 0 and 10.
+
+### Impact
+
+The base impact score is 5.
+
+| Condition | Change |
+|---|---:|
+| Remote code execution | +4 |
+| Code execution | +4 |
+| Sensitive data exposure | +2 |
+| Data loss | +2 |
+| Privilege escalation | +2 |
+
+The final value is clamped between 0 and 10.
+
+These rules are intentionally simple and interpretable.
+They are a prototype and should not be treated as a replacement
+for CVSS or expert security assessment.
