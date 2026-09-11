@@ -1,0 +1,53 @@
+[
+  {
+    "name": "Command Injection",
+    "finding": {
+      "title": "Possible Command Injection",
+      "description": "Untrusted user input appears to be passed to a shell command.",
+      "evidence": "os.system(user_input)"
+    },
+    "expected_exploitability": 7.0,
+    "expected_impact": 5.0,
+    "expected_severity": "high"
+  },
+  {
+    "name": "Remote Code Execution",
+    "finding": {
+      "title": "Remote Code Execution",
+      "description": "Remote code execution allows an attacker to execute arbitrary code."
+    },
+    "expected_exploitability": 7.0,
+    "expected_impact": 9.0,
+    "expected_severity": "high"
+  },
+  {
+    "name": "Authenticated Command Injection",
+    "finding": {
+      "title": "Authenticated Command Injection",
+      "description": "Authentication required before exploiting this command injection."
+    },
+    "expected_exploitability": 5.0,
+    "expected_impact": 5.0,
+    "expected_severity": "medium"
+  },
+  {
+    "name": "Sensitive Data Exposure",
+    "finding": {
+      "title": "Sensitive Data Exposure",
+      "description": "The application exposes sensitive data to unauthorized users."
+    },
+    "expected_exploitability": 5.0,
+    "expected_impact": 7.0,
+    "expected_severity": "medium"
+  },
+  {
+    "name": "Privilege Escalation",
+    "finding": {
+      "title": "Privilege Escalation",
+      "description": "A local user can perform privilege escalation."
+    },
+    "expected_exploitability": 5.0,
+    "expected_impact": 7.0,
+    "expected_severity": "medium"
+  }
+]
